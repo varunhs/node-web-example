@@ -1,3 +1,5 @@
+// Heroku live hosted url:-https://peaceful-falls-11237.herokuapp.com/
+
 const express = require("express");
 const hbs = require("hbs");
 const fs = require("fs");
@@ -45,6 +47,13 @@ app.get("/", (req, res) => {
 app.get("/about", (req, res) => {
   res.render("about.hbs", {
     pageTitle: "About Page"
+  });
+});
+
+app.get("/projects", (req, res) => {
+  res.render("projects.hbs", {
+    pageTitle: "Projects Page",
+    pageDescription: "This is a projects page"
   });
 });
 
